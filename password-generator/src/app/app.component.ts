@@ -70,6 +70,7 @@ this.includeLetters = !this.includeLetters;
       validChars+= symbols;
     }
 
+     
 
     let generatedPassword ='';
 
