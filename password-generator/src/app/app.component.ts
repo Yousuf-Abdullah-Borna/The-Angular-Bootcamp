@@ -45,10 +45,43 @@ this.includeLetters = !this.includeLetters;
 
   onButtonClick(){
 
-    
+    const numbers ='1234567890';
+    const letters ='abcdefghijklmnopqrstuvwyz';
+    const symbols ='!@#$%^&*(()+_*/?><.,';
    
+     
+    let validChars = '';
 
-    this.password= "SUMAYA YEACIN" ;
+    if(this.includeLetters){
+
+      validChars+= letters;
+
+    }
+
+
+    if(this.includeNumbers){
+
+      validChars+= numbers;
+
+    }
+
+    if(this.includeSymbols){
+
+      validChars+= symbols;
+    }
+
+
+    let generatedPassword ='';
+
+    for( let i=0; i<this.passwordLength; i++){
+
+         const index = Math.floor(Math.random() * validChars.length);
+
+         generatedPassword += validChars[index];
+    }
+
+
+    this.password= generatedPassword;
 
     
 
