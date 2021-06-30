@@ -7,11 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  passwordLength:number = 0;
   includeLetters:boolean =false;
   includeNumbers:boolean =false;
   includeSymbols:boolean =false;
   password:string="";
   test: string = "";
+
+
+
+  onChangeLength(value:string){
+
+     const parsedValue = parseInt(value);
+     
+      this.passwordLength = parsedValue;
+
+}
 
 
  onChangeUseLetters(){
