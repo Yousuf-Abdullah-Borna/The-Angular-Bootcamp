@@ -8,25 +8,29 @@
 <div>
 
   <label>Use Letters</label>
-  <input type="checkbox"/>
+  <input (change)="onChangeUseLetters()" type="checkbox"/>
+  {{includeLetters}}
 </div>
 <div>
 
   <label>Use Numbers</label>
-  <input type="checkbox"/>
+  <input (change)="onChangeUseNumbers()" type="checkbox"/>
+  {{includeNumbers}}
+  
 </div>
 
 <div>
 
   <label>Use Symbols</label>
-  <input type="checkbox"/>
+  <input (change)="onChangeUseSymbols()" type="checkbox"/>
+  {{includeSymbols}}
 </div>
 
 <div>
-<button> Generate !</button>
+<button (click)= "onButtonClick()"> Generate !</button>
 </div>
-
+{{test}}
 <div>
   <label>Your Password</label>
-  <input/>
+  <input #box [value]="password" disabled/>
 </div>
